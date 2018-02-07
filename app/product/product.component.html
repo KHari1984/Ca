@@ -1,0 +1,31 @@
+
+<div class="container"style="background-color:lavender;">
+    <h2>{{pageTitle}}</h2>
+<div>
+    <div class="row align-items-start">
+        <div class="col-sm-2">
+            <ul style="list-style-type:none;">
+                <li *ngFor="let product of products" (click)="onSelect(product)" style="margin:0 0 10px 0;">
+                    <img src="../app/product/images/{{product.image}}" style="width:50px">
+                  </li>
+            </ul>
+        </div>
+        <div class="col-lg-8" style="background-color:rgb(183, 77, 187);">
+            <div *ngIf="selectedProduct">
+                <h1>Description</h1>
+                
+                <div>
+                    {{selectedProduct.description}}
+                </div>
+                <br/>
+                <br/>
+                <img src="../app/product/images/{{selectedProduct.image}}"style="width:300px" >
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
